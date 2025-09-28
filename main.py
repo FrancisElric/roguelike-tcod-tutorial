@@ -38,6 +38,7 @@ def main() -> None:
     )
 
     engine = Engine(entities=entities, event_handler=event_handler, game_map=game_map, player=player)
+    #todo dlaczego program się nie wypierdala jak dam dwa razy to samo entity
 
     with tcod.context.new_terminal(
         screen_width,

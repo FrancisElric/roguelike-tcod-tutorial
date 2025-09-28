@@ -29,7 +29,7 @@ def new_tile(
 ) -> np.ndarray:
     """Helper function for defining individual tile types """
     return np.array((walkable, transparent, dark), dtype=tile_dt)
-
+    #todo nie rozumiem dlaczego co się dzieje z tym parametrem dark wtf
 
 floor = new_tile(
     walkable=True, transparent=True, dark=(ord(" "), (255, 255, 255), (50, 50, 150)),
