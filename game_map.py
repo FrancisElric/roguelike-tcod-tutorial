@@ -34,8 +34,4 @@ class GameMap:
             default=tile_types.SHROUD
         )
 
-
-        # dobra zmęczyłem sb
-        # ostania linijka na której jestem to "With all that in place, we need..."
-        # później zrb resztę, na razie wszystko jest ciemne (SHROUD) bo nie dodaliśmy logiki FOV
-        # i nic się nie zmienia w widoczne
+# Odpocząłem 😎
