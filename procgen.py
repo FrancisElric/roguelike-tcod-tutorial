@@ -103,6 +103,14 @@ def generate_dungeon(
         # Finally, append the new room to the list.
         rooms.append(new_room)
 
+    # This little functions adds grass to a random tiles :D
+    for x in range(0,map_width):
+        for y in range(0,map_height):
+        #print("X is: ", x, "\n", "tile is: ", tile_types.floor)
+            if dungeon.tiles[x, y] == tile_types.floor:
+                if random.randint(0,10) > 8:
+                    dungeon.tiles[x, y] = tile_types.grass
+
     # DEBUG print num of rooms
     print(str(len(rooms)))
 
