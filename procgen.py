@@ -70,7 +70,7 @@ def generate_dungeon(
     player: Entity,
 ) -> GameMap:
     """Generate a new dungeon map."""
-    dungeon = GameMap(map_width, map_height)
+    dungeon = GameMap(map_width, map_height, entities=[player])
 
     rooms: List[RectangularRoom] = []
 
@@ -104,12 +104,14 @@ def generate_dungeon(
         rooms.append(new_room)
 
     # This little functions adds grass to a random tiles :D
+    # todo move this to a separated function
     for x in range(0,map_width):
         for y in range(0,map_height):
-        #print("X is: ", x, "\n", "tile is: ", tile_types.floor)
             if dungeon.tiles[x, y] == tile_types.floor:
-                if random.randint(0,10) > 8:
-                    dungeon.tiles[x, y] = tile_types.grass
+                if random.randint(0,10) > 7:
+                    if random.randint(0,1) == 0: dungeon.tiles[x, y] = tile_types.grass1
+                    else: dungeon.tiles[x, y] = tile_types.grass2
+
 
     # DEBUG print num of rooms
     print(str(len(rooms)))

@@ -36,13 +36,19 @@ def new_tile(
 # SHROUD represents unexplored, unseen tiles
 SHROUD = np.array((ord(" "), (255, 255, 255), (0, 0, 0)), dtype=graphic_dt)
 
-grass = new_tile(
+grass1 = new_tile(
     walkable=True,
     transparent=True,
     dark=(44, (255, 255, 255), (50, 50, 150)),
     light=(44, (255, 255, 255), (200, 180, 50)),
 )
 
+grass2 = new_tile(
+    walkable=True,
+    transparent=True,
+    dark=(39, (255, 255, 255), (50, 50, 150)),
+    light=(39, (255, 255, 255), (200, 180, 50)),
+)
 floor = new_tile(
     walkable=True,
     transparent=True,
